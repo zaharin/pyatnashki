@@ -1,0 +1,98 @@
+#game-playing {
+  @extend %game-box;
+
+  position: relative;
+  display: none;
+
+  .btn-new-game,
+  .btn-pause,
+  .btn-menu {
+    padding: 0;
+    margin: 0 10px;
+    width: 66px;
+    height: 56px;
+    border-radius: 0 0 4px 4px;
+    vertical-align: bottom;
+  }
+
+  .count-moves {
+    display: block;
+    float: left;
+    min-width: 42%;
+    padding: 8px 12px;
+    text-align: center;
+    background-color: $count-clicks-background-color;
+    border-radius: 0 4px 4px 0;
+    box-sizing: border-box;
+  }
+
+  .elapsed-time {
+    display: block;
+    float: right;
+    min-width: 42%;
+    padding: 8px 12px;
+    text-align: center;
+    background-color: $count-clicks-background-color;
+    border-radius: 4px 0 0 4px;
+    box-sizing: border-box;
+  }
+}
+
+#panel-playing {
+  position: relative;
+  height: 70px;
+  text-align: center;
+  background-color: $panel-background-color;
+  box-shadow: 0 2px 2px $shadow-color-level-1;
+  box-sizing: border-box;
+}
+
+#board {
+  position: relative;
+  display: block;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  box-sizing: border-box;
+  background-color: $board-background-color;
+}
+
+#board-inner {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  bottom: 8px;
+  left: 8px;
+  background-color: $board-inner-background-color;
+}
+
+#overlay-pause {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  text-align: center;
+  cursor: pointer;
+  background-color: $background-color;
+  transition: opacity 1s ease-in-out;
+
+  h2 {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    font-size: 42px;
+    line-height: 1.2em;
+    margin: -.6em 0 0 0;
+  }
+
+  p {
+    position: absolute;
+    bottom: 1.4em;
+    width: 100%;
+    line-height: 1.4em;
+  }
+}

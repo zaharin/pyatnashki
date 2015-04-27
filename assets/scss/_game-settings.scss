@@ -1,0 +1,24 @@
+#game-settings {
+  @extend %game-box;
+
+  display: none;
+  padding: 4px 26px;
+  text-align: center;
+
+  button {
+    margin-left: .4em;
+    margin-right: .4em;
+    margin-bottom: 1em;
+  }
+
+  .btn-board-size {
+    padding: 0;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+    width: 66px;
+    height: 62px;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1;
+  }
+}

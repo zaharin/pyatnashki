@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head lang="ru">
+    <meta charset="UTF-8">
+    <title>Пятнашки</title>
+    <link rel="stylesheet" href="main.css"/>
+</head>
+<body>
+
+<div id="container">
+    <div id="game-menu">
+        <h1>Пятнашки</h1>
+
+        <button class="btn-play btn-lg">Играть</button>
+        <button class="btn-settings btn-lg">Настройка</button>
+        <button class="btn-rules btn-lg">Правила</button>
+    </div>
+
+    <div id="game-settings">
+        <h2>Настройка</h2>
+
+        <button class="btn-board-size" data-board-size="3">3x3</button>
+        <button class="btn-board-size active" data-board-size="4">4x4</button>
+        <button class="btn-board-size" data-board-size="5">5x5</button>
+
+        <button class="btn-save">Сохранить</button>
+        <button class="btn-close">Закрыть</button>
+    </div>
+
+    <div id="game-rules">
+        <h2>Правила игры Пятнашки</h2>
+        <p>Правила простые: разместить фишки в порядке возрастания номеров...</p>
+
+        <p>
+            Каждый раз, выбирая новую игру, фишки раскладываются случайным образом. Задача игрока не только собрать
+            головоломку, но и потратить на перемещение фишек наименьшее количество ходов. Время, затраченное на
+            прохождение игры, тоже учитывается.
+        </p>
+
+        <button class="btn-close">Закрыть</button>
+    </div>
+
+    <div id="game-playing">
+        <div id="panel-playing">
+            <button class="btn-new-game">Новая<wbr/>игра</button>
+            <button class="btn-pause">Пауза</button>
+            <button class="btn-menu">Меню</button>
+        </div>
+
+        <div id="board">
+            <div id="board-inner"></div>
+        </div>
+
+        <p class="count-moves">Ходы: <span>0</span></p>
+        <p class="elapsed-time">Время: <span>00:00</span></p>
+
+        <div id="overlay-pause" style="display: none;">
+            <h2>Пауза...</h2>
+            <p>Нажмите чтобы продолжить</p>
+        </div>
+    </div>
+
+    <div id="game-wins">
+        <h2>Победа!</h2>
+
+        <p class="count-moves"><span class="title">Ходы:</span><span class="value">0</span></p>
+        <p class="running-time"><span class="title">Время:</span><span class="value">00:00</span></p>
+
+        <button class="btn-play btn-lg">Играть</button>
+        <button class="btn-menu btn-lg">Меню</button>
+    </div>
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>

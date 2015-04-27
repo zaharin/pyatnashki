@@ -1,0 +1,16 @@
+#game-rules {
+  @extend %game-box;
+
+  display: none;
+  padding: 4px 26px;
+  text-align: center;
+
+  p {
+    margin-bottom: 1em;
+    text-align: justify;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+  }
+}

@@ -1,0 +1,39 @@
+#game-wins {
+  @extend %game-box;
+
+  display: none;
+  text-align: center;
+
+  h2 {
+    margin-top: 1.6em;
+    margin-bottom: 1em;
+    font-size: 42px;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: bold;
+
+    .title {
+      display: inline-block;
+      margin-right: 3%;
+      width: 52%;
+      text-align: right;
+    }
+
+    .value {
+      display: inline-block;
+      width: 45%;
+      text-align: left;
+    }
+  }
+
+  .count-moves {
+    margin-bottom: .3em;
+  }
+
+  .running-time {
+    margin-bottom: 2em;
+  }
+}
