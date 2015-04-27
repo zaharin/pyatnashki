@@ -91,6 +91,13 @@ h2 {
   line-height: 1.2em;
 }
 
+p {
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
 .text-center {
   text-align: center;
 }
