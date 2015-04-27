@@ -59,6 +59,12 @@ h2 {
   font-size: 28px;
   line-height: 1.2em; }
 
+p {
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto; }
+
 .text-center {
   text-align: center; }
 
@@ -139,11 +145,7 @@ h2 {
   text-align: center; }
   #game-rules p {
     margin-bottom: 1em;
-    text-align: justify;
-    -moz-hyphens: auto;
-    -webkit-hyphens: auto;
-    -ms-hyphens: auto;
-    hyphens: auto; }
+    text-align: justify; }
 
 #game-playing {
   position: relative;
