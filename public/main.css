@@ -102,16 +102,33 @@ p {
   left: -9999px;
   width: 2px; }
 
-#game-menu, #game-settings, #game-rules, #game-playing, #game-wins {
+#game-pause, #game-menu, #game-settings, #game-rules, #game-playing, #game-wins {
   position: relative;
+  display: none;
   width: 320px;
   height: 480px;
   box-sizing: border-box;
   overflow: hidden;
   background-color: #343434; }
 
+#game-pause {
+  z-index: 1000;
+  text-align: center;
+  cursor: pointer; }
+  #game-pause h2 {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    font-size: 42px;
+    line-height: 1.2em;
+    margin: -.6em 0 0 0; }
+  #game-pause p {
+    position: absolute;
+    bottom: 1.4em;
+    width: 100%;
+    line-height: 1.4em; }
+
 #game-menu {
-  display: none;
   font-weight: bold;
   text-align: center; }
   #game-menu button {
@@ -122,7 +139,6 @@ p {
     height: 2.5em; }
 
 #game-settings {
-  display: none;
   padding: 4px 26px;
   text-align: center; }
   #game-settings button {
@@ -140,41 +156,37 @@ p {
     line-height: 1; }
 
 #game-rules {
-  display: none;
   padding: 4px 26px;
   text-align: center; }
   #game-rules p {
     margin-bottom: 1em;
     text-align: justify; }
 
-#game-playing {
-  position: relative;
-  display: none; }
-  #game-playing .btn-new-game, #game-playing .btn-pause, #game-playing .btn-menu {
-    padding: 0;
-    margin: 0 10px;
-    width: 66px;
-    height: 56px;
-    border-radius: 0 0 4px 4px;
-    vertical-align: bottom; }
-  #game-playing .count-moves {
-    display: block;
-    float: left;
-    min-width: 42%;
-    padding: 8px 12px;
-    text-align: center;
-    background-color: #484848;
-    border-radius: 0 4px 4px 0;
-    box-sizing: border-box; }
-  #game-playing .elapsed-time {
-    display: block;
-    float: right;
-    min-width: 42%;
-    padding: 8px 12px;
-    text-align: center;
-    background-color: #484848;
-    border-radius: 4px 0 0 4px;
-    box-sizing: border-box; }
+#game-playing .btn-new-game, #game-playing .btn-pause, #game-playing .btn-menu {
+  padding: 0;
+  margin: 0 10px;
+  width: 66px;
+  height: 56px;
+  border-radius: 0 0 4px 4px;
+  vertical-align: bottom; }
+#game-playing .count-moves {
+  display: block;
+  float: left;
+  min-width: 42%;
+  padding: 8px 12px;
+  text-align: center;
+  background-color: #484848;
+  border-radius: 0 4px 4px 0;
+  box-sizing: border-box; }
+#game-playing .elapsed-time {
+  display: block;
+  float: right;
+  min-width: 42%;
+  padding: 8px 12px;
+  text-align: center;
+  background-color: #484848;
+  border-radius: 4px 0 0 4px;
+  box-sizing: border-box; }
 
 #panel-playing {
   position: relative;
@@ -203,32 +215,7 @@ p {
   left: 8px;
   background-color: #F4F2F4; }
 
-#overlay-pause {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1000;
-  text-align: center;
-  cursor: pointer;
-  background-color: #343434;
-  transition: opacity 1s ease-in-out; }
-  #overlay-pause h2 {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    font-size: 42px;
-    line-height: 1.2em;
-    margin: -.6em 0 0 0; }
-  #overlay-pause p {
-    position: absolute;
-    bottom: 1.4em;
-    width: 100%;
-    line-height: 1.4em; }
-
 #game-wins {
-  display: none;
   text-align: center; }
   #game-wins h2 {
     margin-top: 1.6em;

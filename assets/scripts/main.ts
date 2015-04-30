@@ -1,47 +1,17 @@
-///<reference path="types.ts" />
-///<reference path="Utils.ts" />
-///<reference path="Keyboard.ts" />
-///<reference path="Timer.ts" />
-///<reference path="Puzzle.ts" />
-///<reference path="BoardDisplay.ts" />
-///<reference path="MenuScreen.ts" />
-///<reference path="SettingsScreen.ts" />
-///<reference path="RulesScreen.ts" />
-///<reference path="PlayingScreen.ts" />
-///<reference path="WinsScreen.ts" />
+///<reference path="GamePuzzle/Types.ts" />
+///<reference path="GamePuzzle/Utils.ts" />
+///<reference path="GamePuzzle/Keyboard.ts" />
+///<reference path="GamePuzzle/Timer.ts" />
+///<reference path="GamePuzzle/Puzzle.ts" />
+///<reference path="GamePuzzle/BoardDisplay.ts" />
+///<reference path="GamePuzzle/Screen.ts" />
+///<reference path="GamePuzzle/Screen/MenuScreen.ts" />
+///<reference path="GamePuzzle/Screen/SettingsScreen.ts" />
+///<reference path="GamePuzzle/Screen/RulesScreen.ts" />
+///<reference path="GamePuzzle/Screen/PlayingScreen.ts" />
+///<reference path="GamePuzzle/Screen/WinsScreen.ts" />
+///<reference path="GamePuzzle/Screen/PauseScreen.ts" />
+///<reference path="GamePuzzle/Game.ts" />
 
-interface IScreens {
-    menu: MenuScreen;
-    settings: SettingsScreen;
-    rules: RulesScreen;
-    playing: PlayingScreen;
-    wins: WinsScreen;
-}
-
-class Game {
-    private currentScreen: IScreen;
-    boardSize: number = 4;
-    countMoves: number;
-    runningTime: number;
-    screens: IScreens;
-
-    constructor() {
-        this.screens = {
-            menu: new MenuScreen(this),
-            settings: new SettingsScreen(this),
-            rules: new RulesScreen(this),
-            playing: new PlayingScreen(this),
-            wins: new WinsScreen(this)
-        };
-        this.setScreen(this.screens.menu);
-    }
-
-    setScreen(screen: IScreen) {
-        if (this.currentScreen) this.currentScreen.deactivate();
-
-        this.currentScreen = screen;
-        this.currentScreen.activate();
-    }
-}
-
-new Game();
+var game = new GamePuzzle.Game();
+game.run();

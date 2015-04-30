@@ -1,4 +1,4 @@
-module Keyboard {
+module GamePuzzle.Keyboard {
     export enum Key {
         KEY_LEFT  = 37,
         KEY_UP    = 38,
